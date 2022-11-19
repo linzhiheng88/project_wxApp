@@ -1,0 +1,1 @@
+<view class="details"><video src="{{productDetails.videoUrl}}"></video><block wx:for="{{productDetails.imageList}}" wx:for-item="item" wx:for-index="__i0__"><view class="imageBox"><image src="{{item.imageUrl}}"></image></view></block></view>

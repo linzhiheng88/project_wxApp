@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<!-- <image class="logo" src="/static/logo.png"></image> -->
+		<image class="logo" src="/static/logo.png" @click="toList"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
@@ -11,13 +11,19 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'bbb'
 			}
 		},
 		onLoad() {
-
+		console.log(111)
 		},
 		methods: {
+			 toList(){
+				console.log(111)
+				uni.navigateTo({
+					url:'/pages/productDetails/productDetails'
+				})
+			}
 
 		}
 	}
