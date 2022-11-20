@@ -10054,12 +10054,7 @@ if (hadRuntime) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */
+/* 30 */
 /*!********************************************************************!*\
   !*** F:/wx小程序/uniApp/app/project_wxApp/styles/productDetails.scss ***!
   \********************************************************************/
@@ -10069,6 +10064,32 @@ if (hadRuntime) {
 // extracted by mini-css-extract-plugin
     if(false) { var cssReload; }
   
+
+/***/ }),
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */
+/*!************************************************************!*\
+  !*** F:/wx小程序/uniApp/app/project_wxApp/utils/showToast.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = showToast;function showToast(msg, callback, duration) {
+  uni.showToast({
+    title: msg,
+    icon: 'none',
+    duration: duration,
+    success: function success(res) {
+      if (callback) {
+        setTimeout(callback, 1500);
+      }
+    } });
+
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 ]]);

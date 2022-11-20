@@ -33,4 +33,9 @@
 .details .imageBox image {
   width: 750rpx;
 }
+.details .copy {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #f8f8f8;
+}
 
