@@ -2,5 +2,7 @@
   "navigationBarTitleText": "",
   "enablePullDownRefresh": false,
   "navigationStyle": "default",
-  "usingComponents": {}
+  "usingComponents": {
+    "show": "/pages/productDetails/showToast/showToast"
+  }
 }

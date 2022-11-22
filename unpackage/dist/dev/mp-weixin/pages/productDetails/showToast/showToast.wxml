@@ -1,0 +1,1 @@
+<view class="msgBox"><view class="title1 _p">{{toast.title1}}</view><view class="title2 _p">{{toast.title2}}</view><view class="title3 _p">{{toast.title3}}</view><button data-event-opts="{{[['tap',[['close',['$event']]]]]}}" class="iknow" bindtap="__e">知道啦</button></view>

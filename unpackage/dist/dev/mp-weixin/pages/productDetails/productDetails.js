@@ -130,7 +130,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 26));
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 38));
+
+
+
+
+
+
+
+
 
 
 
@@ -144,38 +152,88 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _util = _interopRequireDefault(__webpack_require__(/*! ../../utils/util.js */ 29));
-__webpack_require__(/*! ../../styles/productDetails.scss */ 30);
-var _showToast = _interopRequireDefault(__webpack_require__(/*! ../../utils/showToast.js */ 34));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var _default =
+__webpack_require__(/*! ../../styles/productDetails.scss */ 30);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var show = function show() {__webpack_require__.e(/*! require.ensure | pages/productDetails/showToast/showToast */ "pages/productDetails/showToast/showToast").then((function () {return resolve(__webpack_require__(/*! ./showToast/showToast.vue */ 31));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
 {
   data: function data() {
     return {
-      productDetails: {} };
+      productDetails: {},
+      flag: false,
+      toast: {},
+      urlList: [{
+        biaoTi: '前往淘宝查看',
+        index: 1 },
+      {
+        biaoTi: '前往京东查看',
+        index: 2 }] };
+
+
 
   },
+
   onLoad: function onLoad() {
     this.getImgList();
+    console.log(this.productDetails.productNameCn);
+
   },
+
   methods: {
     getImgList: function getImgList() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _yield$request, data;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+
+
+
                   (0, _util.default)('/detail?id=af98a2668f314c378938add6210cb3d6'));case 2:_yield$request = _context.sent;data = _yield$request.data;
                 console.log(data.data);
                 _this.productDetails = data.data;
-                console.log(_this.productDetails);case 7:case "end":return _context.stop();}}}, _callee);}))();
+                console.log(_this.productDetails);
+                _this.productDetails.taobaoUrl = '1111';
+                console.log();
+                wx.setNavigationBarTitle({ title: 'aaa' });case 10:case "end":return _context.stop();}}}, _callee);}))();
     },
-    copy: function copy() {
 
-      uni.setClipboardData({
-        data: this.productDetails.taobaoUrl,
-        success: function success(res) {
-          uni.getClipboardData({
-            success: function success(res) {
-              (0, _showToast.default)(res, 'yse', 3000);
-            } });
+    copyUrl: function copyUrl(pamaras) {
+      var url = '';
+      if (pamaras == 2) {
+        var toast = {
+          title1: '请打开京东App',
+          title2: '复制京东口令成功',
+          title3: '打开京东App即可查看' };
 
+        url = this.productDetails.jdUrl;
+        this.toast = toast;
+      };
+      if (pamaras == 1) {
+        var _toast = {
+          title1: '请打开淘宝App',
+          title2: '复制淘宝口令成功',
+          title3: '打开淘宝App即可查看' };
+
+        url = this.productDetails.taobaoUrl;
+        this.toast = _toast;
+      }
+      this.flag = true;
+      this.copy(url);
+
+    },
+
+    copy: function copy(url) {
+      wx.setClipboardData({
+        data: url,
+        complete: function complete() {
+          wx.hideToast();
         } });
 
-    } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+    },
+
+    getFlag: function getFlag(val) {
+      this.flag = val;
+    } },
+
+
+  components: {
+    show: show } };exports.default = _default;
 
 /***/ })
 

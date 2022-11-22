@@ -8,10 +8,40 @@
 			width:750rpx;
 		}
 	}
-	.copy{
-		width: 100rpx;
-		height: 100rpx;
-		background-color: $uni-bg-color-grey;
+	.urlBox{
+		position: fixed;
+		bottom: 0rpx;
+		width: 750rpx;
+		height: 166rpx;
+	 .center{
+		display: flex;
+		margin-left: 25rpx;
+		.titleBox:nth-child(1){
+			width: 342rpx;
+			height: 94rpx;
+			background: #eb5e2a;
+			border-radius: 46px;
+			text-align: center;
+			font-size: 28rpx;
+			font-family: PingFang SC;
+			font-weight: 400;
+			line-height: 94rpx;
+			color: #FFFFFF;
+		}
+		.titleBox:nth-child(2){
+			width: 342rpx;
+			height: 94rpx;
+			margin-left: 16rpx;
+			background: #d6000f;
+			border-radius: 46px;
+			font-size: 28rpx;
+			text-align: center;
+			font-family: PingFang SC;
+			font-weight: 400;
+			line-height: 94rpx;
+			color: #FFFFFF;
+		}
+	}
 	}
 	
 }
