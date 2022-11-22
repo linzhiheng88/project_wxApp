@@ -57,7 +57,6 @@
 				this.productDetails = data.data
 				console.log(this.productDetails)
 				this.productDetails.taobaoUrl = '1111'
-			   console.log()
 			    wx.setNavigationBarTitle({ title:'aaa'})
 			},
 

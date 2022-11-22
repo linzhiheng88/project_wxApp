@@ -189,8 +189,7 @@ __webpack_require__(/*! ../../styles/productDetails.scss */ 30);function _intero
                 _this.productDetails = data.data;
                 console.log(_this.productDetails);
                 _this.productDetails.taobaoUrl = '1111';
-                console.log();
-                wx.setNavigationBarTitle({ title: 'aaa' });case 10:case "end":return _context.stop();}}}, _callee);}))();
+                wx.setNavigationBarTitle({ title: 'aaa' });case 9:case "end":return _context.stop();}}}, _callee);}))();
     },
 
     copyUrl: function copyUrl(pamaras) {
