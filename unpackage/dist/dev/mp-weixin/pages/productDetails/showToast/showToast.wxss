@@ -24,48 +24,42 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.details video {
-  width: 750rpx;
+.msgBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 20;
+  width: 517rpx;
+  height: 391rpx;
+  background: white;
+  border-radius: 20rpx;
 }
-.details .imageBox {
-  width: 750rpx;
-}
-.details .imageBox image {
-  width: 750rpx;
-}
-.details .urlBox {
-  position: fixed;
-  bottom: 0rpx;
-  width: 750rpx;
-  height: 166rpx;
-}
-.details .urlBox .center {
-  display: flex;
-  margin-left: 25rpx;
-}
-.details .urlBox .center .titleBox:nth-child(1) {
-  width: 342rpx;
-  height: 94rpx;
-  background: #eb5e2a;
-  border-radius: 46px;
+.msgBox .title1 {
+  margin-top: 50rpx;
   text-align: center;
-  font-size: 28rpx;
+  font-size: 36rpx;
   font-family: PingFang SC;
-  font-weight: 400;
-  line-height: 94rpx;
-  color: #FFFFFF;
+  font-weight: 600;
 }
-.details .urlBox .center .titleBox:nth-child(2) {
+.msgBox .title2 {
+  margin-top: 35rpx;
+  text-align: center;
+}
+.msgBox .title3 {
+  text-align: center;
+}
+.msgBox .iknow {
+  margin-top: 48rpx;
   width: 342rpx;
   height: 94rpx;
-  margin-left: 16rpx;
   background: #d6000f;
   border-radius: 46px;
   font-size: 28rpx;
-  text-align: center;
   font-family: PingFang SC;
-  font-weight: 400;
   line-height: 94rpx;
-  color: #FFFFFF;
+  color: white;
 }
 
